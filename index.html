@@ -6,17 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/index.css" />
     <link rel="shortcut icon" href="./Assets/favicon (1).ico" type="image/x-icon" />
     <title>Restaurant</title>
 </head>
 
 <body>
     <header>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Order Now!</li>
-        </ul>
+        <div class="logo">
+          <a href="index.html">
+            <img src="./Assets/lo.png" alt="Logo">
+            <h3 class="logo-title">Restaurant</h3>
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./index.html">Contact</a></li>
+          </ul>
+        </nav>
     </header>
 
 
@@ -24,26 +33,41 @@
         <form>
             <div class="form-group">
                 <label for="foodName">Food Name</label>
-                <input type="text" id="foodName" name="foodName" placeholder="foodName" required>
+                <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
             </div>
 
             <div class="form-group">
-                <label for="typeOfFood">Types of the food</label>
+                <label for="typeOfFood">Types of Food</label>
+                
                 <select id="typeOfFood" name="typeOfFood">
-                    <option value="fruitVege">Fruit and vegetables</option>
-                    <option value="starchyfood">Starchy food</option>
+                    <option value="fruitVege">Fruit and Vegetables</option>
+                    <option value="starchyfood">Starchy Food</option>
                     <option value="dairy">Dairy</option>
                     <option value="Fat">Fat</option>
                 </select>
             </div>
-            <button type="submit">Submit</button>
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price"><br>
+            <input type="submit" id="submit">
         </form>
-
+        <table id="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+        </table>
     </main>
     <footer>
-        <div class="footer-content">© Copyright 2023 Restaurant - DUA'A HAMMO <a
+        <div class="footer-content">© 2023 Restaurant - DUA'A HAMMO <a
                 href="https://duaahammo.myportfolio.com/contact">Let's Work
                 Together</a></div>
+        <div class="social-icons">
+            <a href="./index.html"><i class="fab fa-facebook"></i></a>
+            <a href="./index.html"><i class="fab fa-twitter"></i></a>
+            <a href="./index.html"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
     <script src="./app.js"></script>
 </body>
