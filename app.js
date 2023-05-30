@@ -1,4 +1,5 @@
 "use strict";
+
 var id = 0;
 var allFood = [];
 
@@ -11,45 +12,39 @@ function Food(foodName, type, price) {
     allFood.push(this);
 }
 
-var foodTable = document.getElementById("foodTable");
+
+var foodTable = document.getElementById("table");
 
 // Calculate Price
-function generateRandom(min, max) {
+function generateFoodId() {
+    let min = 1000;
+    let max = 9999; // 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+let form = document.getElementById("form");
+form.addEventListener("submit", subb);
+
 Food.prototype.calculatePrice = function (min, max) {
-    this.price = generateRandom(min, max);
+    this.price = generateFoodId(min, max);
     console.log(this.price);
 };
 
 // Render
 Food.prototype.render = function () {
-    let foodRow = document.createElement("tr");
+    let row = foodTable.insertRow();
+    let idCell = row.insertCell();
+    let nameCell = row.insertCell();
+    let typeCell = row.insertCell();
+    let priceCell = row.insertCell();
 
-    let foodIdCell = document.createElement('td');
-    foodIdCell.textContent = this.foodId;
-    foodRow.appendChild(foodIdCell);
-
-    let foodNameCell = document.createElement('td');
-    foodNameCell.textContent = this.foodName;
-    foodRow.appendChild(foodNameCell);
-
-    let typeCell = document.createElement('td');
+    idCell.textContent = this.foodId;
+    nameCell.textContent = this.foodName;
     typeCell.textContent = this.type;
-    foodRow.appendChild(typeCell);
-
-    let priceCell = document.createElement("td");
     priceCell.textContent = this.price;
-    foodRow.appendChild(priceCell);
-
-    foodTable.appendChild(foodRow);
 };
-
-let form = document.getElementById("form");
-form.addEventListener("submit", submitForm);
-
-function submitForm(event) {
+//event 
+function subb(event) {
     event.preventDefault();
     let name = event.target.foodName.value;
     let type = event.target.typeOfFood.value;
@@ -59,75 +54,3 @@ function submitForm(event) {
     foodNew.render();
     event.target.reset();
 }
-
-
-
-
-
-//"use strict";
-// var id = 0;
-// var allFood = [];
-
-// // Constructor
-// function Food(foodName, type, price) {
-//     this.foodId = ++id;
-//     this.foodName = foodName;
-//     this.type = type;
-//     this.price = price;
-//     allFood.push(this);
-// }
-// var foodTable = document.getElementById("foodTable");
-
-// // Calculate Price
-// function generateFoodId() {
-//     let min = 1000;
-//     let max = 999;
-//     return Math.floor(Math.random() * (max - min + 1) + min);
-// }
-
-// let form = document.getElementById("form")
-// form.addEventListener("submit", subb)
-
-// Food.prototype.calculatePrice = function (min, max) {
-//     this.price = generateRandom(min, max);
-//     console.log(this.price);
-// };
-
-
-// // Render
-// Food.prototype.render = function () {
-//     let a = document.createElement("a");
-//     a.appendChild(a);
-
-//     let foodId = document.createElement('id');
-//     fid.textContent = this.id;
-//     a.appendChild(fid);
-
-//     let foodName = document.createElement('foodName')
-//     fName.textContent = this.foodName
-//     a.appendChild(fName)
-
-//     let type = document.createElement('type')
-//     type.textContent = this.type
-//     a.appendChild(type)
-
-//     let price = document.createElement("price")
-//     parseInt.textContent = this.price
-//     a.appendChild(price)
-
-
-// }
-
-
-
-
-// function subb(event) {
-//     event.preventDefault();
-//     let name = event.target.foodName.value;
-//     let type = event.target.typeOfFood.value;
-//     let price = event.target.price.value;
-//     const foodNew = new Food(name, type, price);
-//     foodNew.calculatePrice(1000, 9999);
-//     foodNew.render();
-//     event.target.reset();
-// }
