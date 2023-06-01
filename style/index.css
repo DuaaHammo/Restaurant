@@ -9,6 +9,10 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #F8F6F4;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh; 
+  
 }
 
 .container {
@@ -153,6 +157,7 @@ h2,
 button[type="submit"],
 .footer-content a {
   font-family: 'Josefin Sans', sans-serif;
+  color: #009879;
 }
 
 .social-icons a {
