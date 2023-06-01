@@ -12,22 +12,18 @@ function Food(foodName, type, price) {
     allFood.push(this);
 }
 
-
 var foodTable = document.getElementById("table");
 
 // Calculate Price
-function generateFoodId() {
-    let min = 1000;
-    let max = 9999; // 
+function generateFoodPrice(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+    
 }
 
-let form = document.getElementById("form");
-form.addEventListener("submit", subb);
-
 Food.prototype.calculatePrice = function (min, max) {
-    this.price = generateFoodId(min, max);
+    this.price = generateFoodPrice(min, max);
     console.log(this.price);
+    
 };
 
 // Render
@@ -43,8 +39,9 @@ Food.prototype.render = function () {
     typeCell.textContent = this.type;
     priceCell.textContent = this.price;
 };
-//event 
-function subb(event) {
+
+// Event handler
+function submit(event) {
     event.preventDefault();
     let name = event.target.foodName.value;
     let type = event.target.typeOfFood.value;
@@ -54,3 +51,8 @@ function subb(event) {
     foodNew.render();
     event.target.reset();
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    let form = document.getElementById("form");
+    form.addEventListener("submit", submit);
+});

@@ -8,50 +8,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style/index.css" />
     <link rel="shortcut icon" href="./Assets/favicon (1).ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Restaurant</title>
 </head>
 
 <body>
     <header>
         <div class="logo">
-          <a href="index.html">
-            <img src="./Assets/lo.png" alt="Logo">
-            <h3 class="logo-title">Restaurant</h3>
-          </a>
+            <a href="index.html">
+                <img src="./Assets/lo.png" alt="Logo">
+                <h3 class="logo-title">Restaurant</h3>
+            </a>
         </div>
         <nav>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./About.html">About</a></li>
-            <li><a href="./index.html">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./index.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
 
     <main>
-        <form>
-            <div class="form-group">
-                <label for="foodName">Food Name</label>
-                <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
-            </div>
+        <div class="card">
+            <form id="form">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="typeOfFood">Types of Food</label>
+                        <select id="typeOfFood" name="typeOfFood">
+                            <option value="Fruit">Fruit </option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="starchyfood">Starchy Food</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="Fat">Fat</option>
+                        </select>
+                    </div>
+                    <label for="foodName">Food Name</label>
+                    <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
+                </div>
 
-            <div class="form-group">
-                <label for="typeOfFood">Types of Food</label>
-                
-                <select id="typeOfFood" name="typeOfFood">
-                    <option value="fruitVege">Fruit and Vegetables</option>
-                    <option value="starchyfood">Starchy Food</option>
-                    <option value="dairy">Dairy</option>
-                    <option value="Fat">Fat</option>
-                </select>
-            </div>
-            <label for="price">Price:</label>
-            <input type="text" id="price" name="price"><br>
-            <input type="submit" id="submit">
-        </form>
-        <table id="table">
-            <tr>
+
+
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+
+        <table id="table" class="styled-table">
+            <tr class="active-row">
                 <th>ID</th>
                 <th>Name</th>
                 <th>Type</th>
