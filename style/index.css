@@ -407,9 +407,9 @@ table#table {
   
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 50px;
   transition: box-shadow 0.3s ease;
-  height: 300px;
+  height: 400px;
   width: 400px;
   font-size: 16px;
 }
@@ -434,6 +434,7 @@ table#table {
 }
 body, header, .container, main, footer {
   text-align: center;
+  
 }
 
 
