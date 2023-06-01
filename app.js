@@ -1,6 +1,6 @@
 "use strict";
 
-var id = 0;
+var id = 1000;
 var allFood = [];
 
 // Constructor
@@ -14,17 +14,9 @@ function Food(foodName, type, price) {
 
 var foodTable = document.getElementById("table");
 
-// Calculate Price
-function generateFoodPrice(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-    
-}
 
-Food.prototype.calculatePrice = function (min, max) {
-    this.price = generateFoodPrice(min, max);
-    console.log(this.price);
-    
-};
+
+console.log(this.price);
 
 // Render
 Food.prototype.render = function () {
@@ -32,7 +24,7 @@ Food.prototype.render = function () {
     let idCell = row.insertCell();
     let nameCell = row.insertCell();
     let typeCell = row.insertCell();
-    let priceCell = row.insertCell();
+    let priceCell = row.insertCell()
 
     idCell.textContent = this.foodId;
     nameCell.textContent = this.foodName;
@@ -45,9 +37,10 @@ function submit(event) {
     event.preventDefault();
     let name = event.target.foodName.value;
     let type = event.target.typeOfFood.value;
-    let price = event.target.price.value;
-    const foodNew = new Food(name, type, price);
-    foodNew.calculatePrice(1000, 9999);
+    
+    let price = parseFloat(event.target.price.value) || 0.0; 
+    
+      const foodNew = new Food(name, type, price);
     foodNew.render();
     event.target.reset();
 }
