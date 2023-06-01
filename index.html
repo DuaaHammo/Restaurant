@@ -30,32 +30,29 @@
     </header>
 
 
-    <main>
-        <div class="card">
-            <form id="form">
-                <div class="form-group">
-                    <div class="form-group">
-                        <label for="typeOfFood">Types of Food</label>
-                        <select id="typeOfFood" name="typeOfFood">
-                            <option value="Fruit">Fruit </option>
-                            <option value="Vegetables">Vegetables</option>
-                            <option value="starchyfood">Starchy Food</option>
-                            <option value="dairy">Dairy</option>
-                            <option value="Fat">Fat</option>
-                        </select>
-                    </div>
-                    <label for="foodName">Food Name</label>
-                    <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
-                </div>
-
-
-
-                <label for="price">Price:</label>
-                <input type="text" id="price" name="price"><br>
-                <input type="submit" id="submit" value="Submit">
-            </form>
-        </div>
-
+    <main><div class="card">
+        <form id="form">
+          <div class="form-group">
+            <label for="foodName">Food Name</label>
+            <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="typeOfFood">Types of Food</label>
+            <select id="typeOfFood" name="typeOfFood">
+              <option value="fruitVege">Fruit and Vegetables</option>
+              <option value="starchyfood">Starchy Food</option>
+              <option value="dairy">Dairy</option>
+              <option value="Fat">Fat</option>
+            </select>
+          </div>
+      
+          <label for="price">Price:</label>
+          <input type="text" id="price" name="price"><br>
+          <input type="submit" id="submit" value="Submit">
+        </form>
+      </div>
+      
         <table id="table" class="styled-table">
             <tr class="active-row">
                 <th>ID</th>
