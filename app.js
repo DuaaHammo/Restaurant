@@ -10,14 +10,16 @@ function Food(foodName, type, price) {
     this.foodName = foodName;
     this.type = type;
     this.price = price;
+
     allFood.push(this)
 }
 
-var foodTable = document.getElementById("table");
+// var foodTable = document.getElementById("table");
 
 
 
-console.log(this.price);
+
+// console.log(this.price);
 
 // // Render
 // Food.prototype.render = function () {
@@ -40,29 +42,29 @@ function submit(event) {
 
     let name = event.target.foodName.value;
     let type = event.target.typeOfFood.value;
-    let price = parseFloat(event.target.price.value) || 0.0; 
-    const foodNew = new Food(name, type, price);
+    let price = parseFloat(event.target.price.value) || 0.0;
+    const foodNew = new food(name, type, price);
 
-    foodNew.render();
-    event.target.reset();
+    // foodNew.render();
+    // event.target.reset();
 
-    
- // newFood.render();
- saveData(allFood);
 
+    // newFood.render();
+    saveData(allFood);
 
 }
-//json
-function saveData(data){
 
-    let saveJs= JSON.stringify(data);
-    localStorage.setItem('food',saveJs);
- }
- //Submit
- form.addEventListener("submit", submit);
-
+//Submit
+form.addEventListener("submit", submit);
 
 // document.addEventListener('DOMContentLoaded', function () {
 //     let form = document.getElementById("form");
 //     form.addEventListener("submit", submit);
 // });
+
+//json
+function saveData(data) {
+    let saveJSON = JSON.stringify(data);
+    localStorage.setItem('food', saveJSON );
+}
+
