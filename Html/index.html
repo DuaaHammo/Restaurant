@@ -2,68 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/style/index.css" />
-    <link rel="shortcut icon" href="./Assets/favicon (1).ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title>Restaurant</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style/index.css" />
+  <link rel="shortcut icon" href="/Assets/favicon (1).ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>Restaurant</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="/Assets/lo.png" alt="Logo">
-                <h3 class="logo-title">Restaurant</h3>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./About.html">About</a></li>
-                <li><a href="./statistics.html">Statistics</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="/Assets/lo.png" alt="Logo">
+        <h3 class="logo-title">Restaurant</h3>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./statistics.html">Statistics</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
-    <main><div class="card">
-        <form id="form">
-          <div class="form-group">
-            <label for="foodName">Food Name</label>
-            <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="typeOfFood">Types of Food</label>
-            <select id="typeOfFood" name="typeOfFood" >
-              <option value="fruitAndVegetables">Fruit and Vegetables</option>
-              <option value="starchyfood">Starchy Food</option>
-              <option value="dairy">Dairy</option>
-              <option value="Fat">Fat</option>
-            </select>
-          </div>
-      
-          <label for="price">Price:</label>
-          <input type="text" id="price" name="price" placeholder="Price" required><br>
-          <input type="submit" id="submit" value="Submit">
-        </form>
-      </div>
-    </main>
-    <footer>
-        <div class="footer-content">© 2023 Restaurant - DUA'A HAMMO <a
-                href="https://duaahammo.myportfolio.com/contact">Let's Work
-                Together</a></div>
-        <div class="social-icons">
-            <a href="./index.html"><i class="fab fa-facebook"></i></a>
-            <a href="./index.html"><i class="fab fa-twitter"></i></a>
-            <a href="./index.html"><i class="fab fa-instagram"></i></a>
+  <main>
+    <div class="card">
+      <form id="form">
+        <div class="form-group">
+          <label for="foodName">Food Name</label>
+          <input type="text" id="foodName" name="foodName" placeholder="Food Name" required>
         </div>
-    </footer>
-    <script src="/Js/app.js"></script>
+
+        <div class="form-group">
+          <label for="typeOfFood">Types of Food</label>
+          <select id="typeOfFood" name="typeOfFood">
+            <option value="fruitAndVegetables">Fruit and Vegetables</option>
+            <option value="starchyfood">Starchy Food</option>
+            <option value="dairy">Dairy</option>
+            <option value="Fat">Fat</option>
+          </select>
+        </div>
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" placeholder="Price" required><br>
+        <input type="submit" value="Submit" onclick="submit(event)">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">© 2023 Restaurant - DUA'A HAMMO <a
+            href="https://duaahammo.myportfolio.com/contact">Let's Work Together</a></div>
+    <div class="social-icons">
+        <a href="https://duaahammo.myportfolio.com/contact"><i class="fab fa-facebook"></i></a>
+        <a href="https://duaahammo.myportfolio.com/contact"><i class="fab fa-twitter"></i></a>
+        <a href="https://duaahammo.myportfolio.com/contact"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+  <script src="/Js/app.js"></script>
 </body>
 
 </html>
