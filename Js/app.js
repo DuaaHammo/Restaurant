@@ -22,15 +22,16 @@ console.log(this.price);
 // // Render
 // Food.prototype.render = function () {
 //     let row = foodTable.insertRow();
-//     let idCell = row.insertCell();
-//     let nameCell = row.insertCell();
-//     let typeCell = row.insertCell();
-//     let priceCell = row.insertCell();
+//     let idnum = row.insertCell();
+//     let namee = row.insertCell();
+//     let typee = row.insertCell();
+//     let pricee = row.insertCell();
 
-//     idCell.textContent = this.foodId;
-//     nameCell.textContent = this.foodName;
-//     typeCell.textContent = this.type;
-//     priceCell.textContent = this.price;
+//     idnum.textContent = this.foodId;
+//     namee.textContent = this.foodName;
+//     typee.textContent = this.type;
+//     pricee.textContent = this.price;
+// render()
 // };
 
 // Event handler

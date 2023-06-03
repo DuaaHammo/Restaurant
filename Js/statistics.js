@@ -21,9 +21,9 @@ function render(obj) {
     idnum.textContent = obj.foodId;
     row.appendChild(idnum);
 
-    var name = document.createElement('td');
-    name.textContent = obj.foodName;
-    row.appendChild(name);
+    var namee = document.createElement('td');
+    namee.textContent = obj.foodName;
+    row.appendChild(namee);
 
     var typee = document.createElement('td');
     typee.textContent = obj.type;

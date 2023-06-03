@@ -1,4 +1,7 @@
 # Restaurant
+
+
+## Home page:
 - Food Name
 - Types of Food (select field) with the following options:
   - Fruit and vegetables
@@ -30,15 +33,18 @@ In JavaScript, you will implement the following functionalities:
 4. Add an event listener to capture the form data dynamically, instead of using hardcoded data.
 
 5. Create a render prototype method to display each food name and its corresponding information from the form on the home page. You can render this information as a table view.
+__ 
 
-Example Table View:
+# Home page:
 
-| Food Name  | Type               | Price |
-|------------|--------------------|-------|
-| Apple      | Fruit and vegetables | $2.50 |
-| Potato     | Starchy food        | $1.00 |
-| Milk       | Dairy              | $3.00 |
-| Chicken    | Protein            | $5.50 |
-| Olive Oil  | Fat                | $4.00 |
-| ...        | ...                | ...   |
+* Data from the form is saved in local storage as JSON when the submit button is clicked.
+* The page has a header with navigation links to other pages.
+* The table is moved to the statistics page.
+* The footer includes social media links and copyright.
 
+# Statistics page:
+
+* The header allows navigation to other pages.
+* The table is populated with data from local storage and rendered on the statistics page.
+* The footer contains social media links and copyright.
+* Use a separate JavaScript file, statistics.js, to handle rendering and data persistence.
