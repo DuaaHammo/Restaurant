@@ -1,7 +1,5 @@
 # Restaurant
 
-
-## Home page:
 - Food Name
 - Types of Food (select field) with the following options:
   - Fruit and vegetables
