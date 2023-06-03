@@ -160,3 +160,47 @@ button[type="submit"],
   display: inline-block;
   margin-right: 10px;
 }
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F8F6F4;
+  animation: backgroundAnimation 10s infinite linear;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: fadeInAnimation 1s ease-in-out;
+}
+
+/* Rest of the styles... */
+
+/* Animations */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #F8F6F4;
+  }
+  50% {
+    background-color: #EAE7E4;
+  }
+  100% {
+    background-color: #F8F6F4;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
